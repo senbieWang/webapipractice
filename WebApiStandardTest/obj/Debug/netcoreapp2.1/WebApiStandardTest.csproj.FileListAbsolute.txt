@@ -1,0 +1,16 @@
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\bin\Debug\netcoreapp2.1\WebApiStandardTest.deps.json
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\bin\Debug\netcoreapp2.1\WebApiStandardTest.runtimeconfig.json
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\bin\Debug\netcoreapp2.1\WebApiStandardTest.runtimeconfig.dev.json
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\bin\Debug\netcoreapp2.1\WebApiStandardTest.dll
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.csprojAssemblyReference.cache
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.csproj.CoreCompileInputs.cache
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.RazorAssemblyInfo.cache
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.RazorAssemblyInfo.cs
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.AssemblyInfoInputs.cache
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.AssemblyInfo.cs
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.RazorTargetAssemblyInfo.cache
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\bin\Debug\netcoreapp2.1\WebApiStandardTest.pdb
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.dll
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.pdb
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\bin\Debug\netcoreapp2.1\WebApiStandardTest.xml
+E:\TestWorkPath\WebApiStandardTest\WebApiStandardTest\obj\Debug\netcoreapp2.1\WebApiStandardTest.xml

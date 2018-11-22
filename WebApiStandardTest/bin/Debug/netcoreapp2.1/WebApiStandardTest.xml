@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiStandardTest</name>
+    </assembly>
+    <members>
+        <member name="T:WebApiStandardTest.Filter.EnumDocumentFilter">
+            <summary>
+            Add enum value descriptions to Swagger
+            </summary>
+        </member>
+        <member name="M:WebApiStandardTest.Filter.EnumDocumentFilter.Apply(Swashbuckle.AspNetCore.Swagger.SwaggerDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:WebApiStandardTest.Filter.ModelValidactionAttribute">
+            <summary>
+            判断是否是一个格式正确的请求
+            </summary>
+        </member>
+        <member name="M:WebApiStandardTest.Filter.ModelValidactionAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            action执行前执行此过滤器
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:WebApiStandardTest.Filter.SwaggerDefaultValues">
+            <summary>
+            Represents the Swagger/Swashbuckle operation filter used to document the implicit API version parameter.
+            </summary>
+            <remarks>This <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter"/> is only required due to bugs in the <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator"/>.
+            Once they are fixed and published, this class can be removed.</remarks>
+        </member>
+        <member name="M:WebApiStandardTest.Filter.SwaggerDefaultValues.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Applies the filter to the specified operation using the given context.
+            </summary>
+            <param name="operation">The operation to apply the filter to.</param>
+            <param name="context">The current operation filter context.</param>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetSubDatas">
+            <summary>
+            获取所有项目子集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.CreateSubData(System.String,System.String)">
+            <summary>
+            创建一个项目子集
+            </summary>
+            <param name="value"></param>
+            <param name="subdatename">项目子集名称</param>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.DeleteSubData(System.String)">
+            <summary>
+            删除特定的数据子集
+            </summary>
+            <param name="subdataid">项目子集名称</param>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetSubDataByID(System.String)">
+            <summary>
+            获取特定的项目子集
+            </summary>
+            <param name="subdataid">项目子集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.CreateBimsDataforSubdata(System.String,System.String)">
+            <summary>
+            给特定的项目子集上传/更新数据
+            </summary>
+            <param name="value"></param>
+            <param name="subdatename">项目子集名称</param>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.CreateOrganizations(System.String,System.String,System.String)">
+            <summary>
+            给特定的项目子集创建组织关系
+            </summary>
+            <param name="value"></param>
+            <param name="subdataid">项目子集ID</param>
+            <param name="orgname">组织关系名</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetOrganizations(System.String,System.String)">
+            <summary>
+            获取特定项目子集的特定名称的组织关系数据
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="orgname">组织关系名</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.CreateOrganizationdataFororganization(System.String,System.String,System.String)">
+            <summary>
+            给特定的项目子集的特定的组织关系添加组织关系数据
+            </summary>
+            <param name="value"></param>
+            <param name="subdataid">项目子集ID</param>
+            <param name="orgname">组织关系名</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetAttrbuties(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的属性集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">数据版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetAttrbutie(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            获取特定项目子集特定构件的属性，支持过滤查询
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="bimsobjectid">构件ID</param>
+             <param name="versionNo">数据版本号，默认为当前最新版本</param>
+            <param name="query">查询条件，非必须</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetGeomtrys(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的几何集
+            </summary>
+            <param name="subdataid">项目子集ID</param> 
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetMaterials(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的材质集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetTextures(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的贴图集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetPipes(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的管线管件集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V1.Controllers.SubdatasController.GetSpaces(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的空间集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetSubDatas">
+            <summary>
+            获取所有项目子集
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.CreateSubData(WebApiStandardTest.V2.Models.Subdata,System.String)">
+            <summary>
+            创建一个项目子集
+            </summary>
+            <param name="subdata"></param>
+            <param name="subdatename">项目子集名称</param>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.DeleteSubData(System.String)">
+            <summary>
+            删除特定的数据子集
+            </summary>
+            <param name="subdataid">项目子集名称</param>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetSubDataByID(System.String)">
+            <summary>
+            获取特定的项目子集
+            </summary>
+            <param name="subdataid">项目子集名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.CreateBimsDataforSubdata(System.String,System.String)">
+            <summary>
+            给特定的项目子集上传/更新数据
+            </summary>
+            <param name="value"></param>
+            <param name="subdatename">项目子集名称</param>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.CreateOrganizations(System.String,System.String,System.String)">
+            <summary>
+            给特定的项目子集创建组织关系
+            </summary>
+            <param name="value"></param>
+            <param name="subdataid">项目子集ID</param>
+            <param name="orgname">组织关系名</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetOrganizations(System.String,System.String)">
+            <summary>
+            获取特定项目子集的特定名称的组织关系数据
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="orgname">组织关系名</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.CreateOrganizationdataFororganization(System.String,System.String,System.String)">
+            <summary>
+            给特定的项目子集的特定的组织关系添加组织关系数据
+            </summary>
+            <param name="value"></param>
+            <param name="subdataid">项目子集ID</param>
+            <param name="orgname">组织关系名</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetAttrbuties(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的属性集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">数据版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetAttrbutie(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            获取特定项目子集特定构件的属性，支持过滤查询
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="bimsobjectid">构件ID</param>
+             <param name="versionNo">数据版本号，默认为当前最新版本</param>
+            <param name="query">查询条件，非必须</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetGeomtrys(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的几何集
+            </summary>
+            <param name="subdataid">项目子集ID</param> 
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetMaterials(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的材质集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetTextures(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的贴图集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetPipes(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的管线管件集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApiStandardTest.V2.Controllers.SubdatasController.GetSpaces(System.String,System.Int32)">
+            <summary>
+            获取特定项目子集的空间集
+            </summary>
+            <param name="subdataid">项目子集ID</param>
+            <param name="versionNo">版本号</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
