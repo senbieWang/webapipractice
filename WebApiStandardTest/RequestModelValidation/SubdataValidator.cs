@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebApiStandardTest.RequestModelValidation
 {
+    //三方插件,判断 request from body 的参数的合法性
     public class SubdataValidator : AbstractValidator<V2.Models.Subdata>
     {
         public SubdataValidator()

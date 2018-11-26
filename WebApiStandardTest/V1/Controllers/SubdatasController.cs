@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 
 namespace WebApiStandardTest.V1.Controllers
 {
-
     [Produces("application/json")]
     [ApiVersion("1.1")]
     [ApiVersion("1.0",Deprecated = true)] 

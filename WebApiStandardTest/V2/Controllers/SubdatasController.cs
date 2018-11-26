@@ -5,13 +5,19 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using WebApiStandardTest.MyAttribute;
+using WebApiStandardTest.RequestModelValidation;
 using WebApiStandardTest.V2.Models;
+
+//https://www.strathweb.com/2016/09/required-query-string-parameters-in-asp-net-core-mvc/   query parameter check
+//https://www.strathweb.com/2017/06/using-iactionconstraints-in-asp-net-core-mvc/   // rout parameter check
+//https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters?view=aspnetcore-2.1  filter
 
 namespace WebApiStandardTest.V2.Controllers
 {
 
-    //[Produces("application/json"), ApiExplorerSettings(GroupName = "BimsQuery")]      
-    [ApiVersion("2.0",Deprecated = false)]
+    [Produces("application/json")]      
+    [ApiVersion("2.0")]
     [Route("bims/v{version:apiVersion}/subdatas")]
     [ApiController]
     public class SubdatasController : ControllerBase
@@ -34,6 +40,7 @@ namespace WebApiStandardTest.V2.Controllers
         [Route("{subdatename}")]
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        
         public void CreateSubData( Subdata subdata,string subdatename)
         {
 
@@ -55,9 +62,13 @@ namespace WebApiStandardTest.V2.Controllers
         /// </summary>
         /// <param name="subdataid">项目子集名称</param>
         /// <returns></returns>
-        [Route("{subdataid:guid}")]
-        [HttpGet()]
-        public ActionResult<string> GetSubDataByID(string subdataid)
+
+        //[ConstrainedRoute("{subdataid:guid}", typeof(AcceptSubdataIDActionConstraint), "21355")]
+        //[RequireHeader("subdataid")]  
+
+        [Route("{subdataid:guid}")]  
+        [HttpGet()]     
+        public ActionResult<string> GetSubDataByID([SubdataIdConstraint]string subdataid)
         {
             return "value";
         }
@@ -69,7 +80,7 @@ namespace WebApiStandardTest.V2.Controllers
         /// <param name="subdatename">项目子集名称</param>
         [Route("{subdataid:guid}/bimsdata")]
         [HttpPost]
-        public void CreateBimsDataforSubdata( string value, string subdatename)
+        public void CreateBimsDataforSubdata( string value,[SubdataNameConstraint] string subdatename)
         {
 
         }

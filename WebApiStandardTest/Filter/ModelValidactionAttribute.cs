@@ -21,7 +21,7 @@ namespace WebApiStandardTest.Filter
             if (!context.ModelState.IsValid)
             {
                 context.Result = new BadRequestObjectResult(context.ModelState); // returns 400 with error
-            }
+            }          
         }
     }
 }

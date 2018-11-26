@@ -137,5 +137,6 @@ namespace WebApiStandardTest
             mvc.AddFluentValidation();
             services.AddTransient<IValidator<V2.Models.Subdata>, SubdataValidator>();
         }
+
     }
 }

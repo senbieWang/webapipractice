@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApiStandardTest.Filter;
+using WebApiStandardTest.RequestModelValidation;
 
 
 //https://code-maze.com/aspnetcore-webapi-best-practices/   ASP.NET Core Web API Best Practices
@@ -31,6 +32,9 @@ namespace WebApiStandardTest
 
             //FluentValidation
             services.ConfigureFluentValidation(mvc);
+
+            //参数校验
+            //services
 
             //bad request 处理 
             //services.AddScoped<ModelValidactionAttribute>();
