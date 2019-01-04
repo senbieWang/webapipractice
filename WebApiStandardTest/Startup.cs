@@ -76,8 +76,6 @@ namespace WebApiStandardTest
                     options.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
                 }
             });
-
-
         }
     }
 }
