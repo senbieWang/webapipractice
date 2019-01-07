@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 
@@ -13,6 +14,7 @@ namespace WebApiStandardTest.V1.Controllers
     [ApiVersion("1.0",Deprecated = true)] 
     [Route("bims/v{version:apiVersion}/subdatas")]
     [ApiController]
+    
     public class SubdatasController : ControllerBase
     {
         /// <summary>

@@ -26,12 +26,29 @@ namespace WebApiStandardTest
         // This method gets called by the runtime. Use this method to add services to the container.    
         public void ConfigureServices(IServiceCollection services)
         {
+            //Identity server4
+            services.AddMvcCore()
+                .AddAuthorization()
+                .AddJsonFormatters();
+
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(options =>
+                {
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+                    options.ApiName = "api1";
+                });
+
+            
             //注册MVC服务
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddFluentValidation();
             var mvc = services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             //FluentValidation
             services.ConfigureFluentValidation(mvc);
+
+            //添加日志模块   ？？  2019-1-4           
+
 
             //参数校验
             //services
@@ -64,6 +81,8 @@ namespace WebApiStandardTest
             {             
                 app.UseHsts();
             }
+
+            app.UseAuthentication();
 
             app.UseMvc();
 

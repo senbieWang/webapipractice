@@ -1,0 +1,11 @@
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\bin\Debug\netcoreapp2.1\AuthClientTest.deps.json
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\bin\Debug\netcoreapp2.1\AuthClientTest.runtimeconfig.json
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\bin\Debug\netcoreapp2.1\AuthClientTest.runtimeconfig.dev.json
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\bin\Debug\netcoreapp2.1\AuthClientTest.dll
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\obj\Debug\netcoreapp2.1\AuthClientTest.csproj.CoreCompileInputs.cache
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\obj\Debug\netcoreapp2.1\AuthClientTest.AssemblyInfoInputs.cache
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\obj\Debug\netcoreapp2.1\AuthClientTest.AssemblyInfo.cs
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\obj\Debug\netcoreapp2.1\AuthClientTest.csprojAssemblyReference.cache
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\bin\Debug\netcoreapp2.1\AuthClientTest.pdb
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\obj\Debug\netcoreapp2.1\AuthClientTest.dll
+E:\TestWorkPath\WebApiStandardTest\AuthClientTest\obj\Debug\netcoreapp2.1\AuthClientTest.pdb
