@@ -8,24 +8,26 @@ namespace AuthClientTest
 {
     public class Program
     {
-        public static void Main(string[] args) => MainAsync().GetAwaiter().GetResult();
-        //{
-        //    MainAsync().GetAwaiter().GetResult();
-        //} 
+        public static void Main(string[] args) => MainAsync().GetAwaiter().GetResult();        
 
         private static async Task MainAsync()
         {
             // discover endpoints from the metadata by calling Auth server hosted on 5000 port
-            var discoveryClient = await DiscoveryClient.GetAsync("http://localhost:5000");
+            var discoveryClient = await DiscoveryClient.GetAsync("http://localhost:5000"); //retrieve the OpenID Connect discovery document
             if (discoveryClient.IsError)
             {
                 Console.WriteLine(discoveryClient.Error);
                 return;
             }
 
-            // request the token from the Auth server
-            var tokenClient = new TokenClient(discoveryClient.TokenEndpoint, "client", "secret");
-            var response = await tokenClient.RequestClientCredentialsAsync("api1");
+            //客户端模式
+            //var tokenClient = new TokenClient(discoveryClient.TokenEndpoint, "client", "secret");
+            //var response = await tokenClient.RequestClientCredentialsAsync("api1");  //get token
+
+
+            //密码模式
+            var tokenClient = new TokenClient(discoveryClient.TokenEndpoint, "Client_id_1", "secret");
+            var response = await tokenClient.RequestResourceOwnerPasswordAsync("xishuai","123", "api_name1");  //get token
 
             if (response.IsError)
             {

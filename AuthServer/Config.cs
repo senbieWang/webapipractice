@@ -11,13 +11,13 @@ namespace AuthServer
         // clients that are allowed to access resources from the Auth server
         public static IEnumerable<Client> GetClients()
         {
-            // client credentials, list of clients
+            // clientID  and  ClientSecret
             return new List<Client>
             {
                  new Client
                  {
                      ClientId = "client",
-                     AllowedGrantTypes = GrantTypes.ClientCredentials,
+                     AllowedGrantTypes = GrantTypes.ClientCredentials,  //客户端模式
                      
                      // Client secrets
                      ClientSecrets = {

@@ -28,15 +28,15 @@ namespace WebApiStandardTest
         {
             //Identity server4
             services.AddMvcCore()
-                .AddAuthorization()
+                .AddAuthorization()   //授权
                 .AddJsonFormatters();
 
-            services.AddAuthentication("Bearer")
+            services.AddAuthentication("Bearer")   //认证
                 .AddIdentityServerAuthentication(options =>
                 {
                     options.Authority = "http://localhost:5000";
                     options.RequireHttpsMetadata = false;
-                    options.ApiName = "api1";
+                    options.ApiName = "api_name1";
                 });
 
             
